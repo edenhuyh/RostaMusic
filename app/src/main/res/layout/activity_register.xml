@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bk"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/loginHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:layout_gravity="center"
+            android:text="R E G I S T E R" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputName"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin" />
+
+            <EditText
+                android:id="@+id/etxt_email"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_name_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:minHeight="48dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmail"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin" />
+
+            <EditText
+                android:id="@+id/etxt_username"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_email_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minHeight="48dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin" />
+
+            <EditText
+                android:id="@+id/etxt_password"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:minHeight="48dp" />
+
+
+        <Button
+            android:id="@+id/btn_signup"
+            style="@style/loginButton"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="Sign Up" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="@string/signup_login_hint"
+            android:textAlignment="textEnd"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold"
+            android:gravity="end" />
+
+    </LinearLayout>
+</RelativeLayout>

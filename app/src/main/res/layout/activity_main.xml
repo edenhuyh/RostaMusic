@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.MainActivity">
+
+<!--    for refreshing layout on swipe from top-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--for buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--Charts Button-->
+            <Button
+                android:id="@+id/btn_charts"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/charts_btn"
+                android:drawableTop="@drawable/charts_icon"
+                android:text="@string/charts_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+            <!--Search Button-->
+            <Button
+                android:id="@+id/btn_search"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/search_view"
+                android:drawableTop="@android:drawable/ic_menu_search"
+                android:text="Search"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+            <!--Playlists Button-->
+            <Button
+                android:id="@+id/btn_playlist"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/playlist_btn"
+                android:drawableTop="@drawable/playlist_icon"
+                android:text="@string/playlist_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <!--History Button-->
+            <Button
+                android:id="@+id/btn_history"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/history_btn"
+                android:drawableTop="@drawable/history_icon"
+                android:text="@string/history_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!--Total Songs Button-->
+        <TextView
+            android:id="@+id/totalSongs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/total_songs"
+            android:textColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_song"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@drawable/scroll_bar_icon"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
